@@ -5,21 +5,21 @@
 		<name>Przemienienia Pańskiego</name>
 		<description>www.przemienienie.pl</description>
 		<Point>
-			<coordinates>54.546491,18.4531748,19.5z</coordinates>
+			<coordinates>18.4531748,54.546491,19.5</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
 		<name>Św. Jana Chrzciciela i Św. Alberta Chmielowskiego</name>
 		<description>www.janchrzciciel.com</description>
 		<Point>
-			<coordinates>54.5443426,18.4624266,19.5</coordinates>
+			<coordinates>18.4624266,54.5443426,19.5</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
 		<name>Św. Józefa</name>
 		<description>www.jozef.pl</description>
 		<Point>
-			<coordinates>54.5328745,18.4923057,18z</coordinates>
+			<coordinates>18.4923057,54.5328745,18</coordinates>
 		</Point>
 	</Placemark>
 </Document>
