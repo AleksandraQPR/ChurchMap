@@ -12,10 +12,10 @@ function initialize() {
     var myOptions = {
         draggableCursor: 'crosshair' ,
         zoom: 18,
-        center: new google.maps.LatLng(54.371, 18.612),
+        center: new google.maps.LatLng(54.546, 18.453),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     };
-    map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+    map = new google.maps.Map(document.getElementById('mapa'), myOptions);
 
     google.maps.event.addListener(map, 'click', grab);
 
@@ -31,8 +31,7 @@ function grab(event) {
 }
 		 
 function codeLatLng(event) {
-//		 document.getElementById("lonbox").value = 
-//		 document.getElementById("latbox").value = event.latLng.lng();
+
     var latlng = new google.maps.LatLng(lat, lng);
 
     geocoder.geocode({'latLng': latlng}, function(results, status) {
