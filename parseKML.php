@@ -1,9 +1,10 @@
 <?
 
 function pKML($file) {
-// Parsowanie kliku kml
+    // Parsowanie kliku kml
+    // Zwraca tablice asocjacyjna 
     $output = array();
-
+    // Otwieranie pliku KML
     $xml=new DOMDocument();
     $xml->load($file);
 
@@ -24,7 +25,7 @@ function pKML($file) {
             foreach ($point->getElementsByTagName('coordinates') as $coordinates) {
                 
                 $coordinate = $coordinates->nodeValue;
-                $coordinate = str_replace(" ", "", $coordinate);//trim white space
+                $coordinate = str_replace(" ", "", $coordinate);
             
                 $tmp = explode(",", $coordinate);
             
@@ -37,8 +38,10 @@ function pKML($file) {
         }
     }
 
+// output ma nastepujaca postac:
+// $output = array('Twoj kociol' => array('desc' => 'www.kosciol.pl', 'coord'=> array('longitude'=>'dlugosc', 'latitude'=>'szerokosc', 'altitude'=>'wysokosc') ));
+    
     return $output; 
-
 }
 
 ?>
