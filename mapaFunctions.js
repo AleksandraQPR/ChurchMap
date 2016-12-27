@@ -25,9 +25,9 @@ function initialize() {
 	 
 function grab(event) {
     document.getElementById("lonbox").value = event.latLng.lat();
-    costam1=event.latLng.lat();
+    lat=event.latLng.lat();
     document.getElementById("latbox").value = event.latLng.lng();
-    costam2=event.latLng.lng();
+    lng=event.latLng.lng();
 }
 		 
 function codeLatLng(event) {
