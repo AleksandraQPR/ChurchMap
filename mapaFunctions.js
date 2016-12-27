@@ -24,9 +24,9 @@ function initialize() {
 }
 	 
 function grab(event) {
-    document.getElementById("lonbox").value = event.latLng.lat();
+    document.getElementById("szerokoscGeograficzna").value = event.latLng.lat();
     lat=event.latLng.lat();
-    document.getElementById("latbox").value = event.latLng.lng();
+    document.getElementById("dlugoscGeograficzna").value = event.latLng.lng();
     lng=event.latLng.lng();
 }
 		 
