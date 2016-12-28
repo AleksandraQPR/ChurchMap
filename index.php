@@ -16,7 +16,6 @@
             <button type="button" onclick="" >ZATWIERDŹ WSPÓŁRZĘDNE</button>
             <input type="text" name="plikKML"  placeholder="ścieżka pliku KML" />
             <button type="button" onclick="" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
-            <button type="button" onclick="" >PRZEŚLIJ</button>
         </div>
     </body>
 </html>
