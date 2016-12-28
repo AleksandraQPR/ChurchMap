@@ -9,9 +9,6 @@
         src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     </head>
     <body>
-        <header>
-            <div id="naglowekMapy"></div>
-        </header>
         <div id="mapa"></div>
         <div id="formularz">
             <input type="text" name="dlugoscGeograficzna"  placeholder="długość geograficzna" />
