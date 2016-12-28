@@ -12,8 +12,8 @@
     <body>
         <div id="mapa"></div>
         <div id="formularz">
-            <input type="text" name="dlugoscGeograficzna"  placeholder="długość geograficzna" />
-            <input type="text" name="szerokoscGeograficzna"  placeholder="szerokość geograficzna" />
+            <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="długość geograficzna" />
+            <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="szerokość geograficzna" />
             <button type="button" onclick="codeLatLng()" >ZATWIERDŹ WSPÓŁRZĘDNE</button>
             <input type="text" name="plikKML"  placeholder="ścieżka pliku KML" />
             <button type="button" onclick="" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
