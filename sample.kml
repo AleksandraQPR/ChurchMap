@@ -22,5 +22,12 @@
 			<coordinates>18.4923057,54.5328745,18</coordinates>
 		</Point>
 	</Placemark>
+	<Placemark>
+		<name>pw Najświętszego Serca Jezusowego</name>
+		<description>nsjwrzeszcz.pl</description>
+		<Point>
+			<coordinates>18.6088427,54.3800614,18.75</coordinates>
+		</Point>
+	</Placemark>
 </Document>
 </kml>
