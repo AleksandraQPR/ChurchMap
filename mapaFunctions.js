@@ -1,8 +1,6 @@
 var map;
 var lat;
 var lng;
-// wyświetlany kml na powierzchni mapy
-var kmllayer = new google.maps.KmlLayer('mu.kml');
 
 var geocoder = new google.maps.Geocoder();
 var infowindow = new google.maps.InfoWindow();
@@ -18,9 +16,10 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('mapa'), myOptions);
 
     google.maps.event.addListener(map, 'click', grab);
-
+    
+    // wyświetlany kml na powierzchni mapy
+    var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
     kmllayer.setMap(map);
-
 }
 	 
 function grab(event) {
