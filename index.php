@@ -7,6 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
         <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script href="mapaFunctions.js"></script>
     </head>
     <body>
         <div id="mapa"></div>
