@@ -18,7 +18,7 @@
                 <button type="button" onclick="codeLatLng()" >ZATWIERDŹ WSPÓŁRZĘDNE</button>
             </div>
             <div class="kontenerDanych">
-                <input type="text" name="plikKML"  placeholder="Podaj ścieżkę pliku KML" />
+                <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
                 <button type="button" onclick="" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
             </div>
         </div>
