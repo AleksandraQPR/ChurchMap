@@ -15,7 +15,6 @@ html,body
 {
     width: 300px;
     background-color: #161b20;
-    padding: 30px;
     height: 100%;
     text-align: center;
     position: absolute;
@@ -24,9 +23,13 @@ html,body
     margin-left: auto;
     margin-right: auto;
 }
+.kontenerDanych
+{
+    margin-top: 35px;
+}
 input[type=text]
 {
-    width: 250px;
+    width: 240px;
     background-color: #f5f7fa;
     padding: 10px;
     margin: 8px;
