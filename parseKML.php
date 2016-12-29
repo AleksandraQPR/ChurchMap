@@ -1,4 +1,4 @@
-<?
+<?php
 
 function pKML($file) {
     // Parsowanie kliku kml
