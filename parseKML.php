@@ -6,7 +6,9 @@ function pKML($file) {
     $output = array();
     // Otwieranie pliku KML
     $xml=new DOMDocument();
-    $xml->load($file);
+    if(!$xml->load($file)) {
+        throw new Exception('Nie udalo sie zaladowac pliku');
+    }
 
     foreach($xml->getElementsByTagName('Placemark') as $placemark) {
         foreach ( $placemark->getElementsByTagName('name') as $name) {
