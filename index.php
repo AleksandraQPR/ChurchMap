@@ -19,7 +19,7 @@
             </div>
             <div class="kontenerDanych">
                 <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
-                <button type="button" onclick="" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
+                <button type="button" onclick="upload()" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
             </div>
         </div>
     </body>

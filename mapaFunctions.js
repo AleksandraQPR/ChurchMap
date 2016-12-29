@@ -45,3 +45,23 @@ function codeLatLng(event) {
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+function upload() {
+    if (document.getElementById('plikKML') != null) {
+        var file = document.querySelector('#plikKML').files[0];
+        var url = 'odbierz.php';
+        var xhr = new XMLHttpRequest();
+        var fd = new FormData();
+        xhr.open("POST", url, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                
+                console.log(xhr.responseText); // handle response.
+            }
+        };
+        fd.append("upload_file", file);
+        xhr.send(fd);
+    }
+    
+}
