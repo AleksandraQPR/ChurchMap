@@ -13,9 +13,9 @@ if (isset($_FILES['upload_file'])) {
         echo $_FILES['upload_file']['name']. " OK";
     }
     catch (Exception $e) {
-        echo $_FILES['upload_file']['name']. " KO";
-    }    
-        var_dump($tablic);
+        echo $e->getmessage(). " KO";
+    }
+        
     exit;
 } else {
     echo "No files uploaded ...";
