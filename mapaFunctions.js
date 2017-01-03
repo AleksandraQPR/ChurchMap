@@ -43,6 +43,17 @@ function codeLatLng(event) {
     });
 }
 
+function addToDatabase(jsondata) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", 'wpisz.php', false);
+    xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                
+                console.log(xhr.responseText);
+            }
+        };
+    xhr.send(jsondata);
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
