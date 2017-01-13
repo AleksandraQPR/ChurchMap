@@ -27,8 +27,30 @@ function grab(event) {
     lat=event.latLng.lat();
     document.getElementById("dlugoscGeograficzna").value = event.latLng.lng();
     lng=event.latLng.lng();
+
+    var miejsce = map.getBounds();
+;}
+
+function retrieve(bounds) {
+    var granice = {};
+    granice.gora = bounds.getNorthEast().lat();
+    granice.prawo = bounds.getNorthEast().lng();
+    granice.dol = bounds.getSouthWest().lat();
+    granice.lewo = bounds.getSouthWest().lng();
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", 'pokaz.php', true);
+    xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                //TODO wyswietlanie wszystkich punktow na mapie
+                console.log(xhr.responseText);
+            }
+        };
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.send(JSON.stringity(granice));
+
 }
-		 
+
 function codeLatLng(event) {
 
     var latlng = new google.maps.LatLng(lat, lng);
