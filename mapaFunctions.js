@@ -29,6 +29,7 @@ function grab(event) {
     lng=event.latLng.lng();
 
     var miejsce = map.getBounds();
+    //TODO wywolanie funkcji retrieve
 ;}
 
 function retrieve(bounds) {
