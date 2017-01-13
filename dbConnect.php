@@ -2,7 +2,7 @@
 const ip = 'localhost';
 const user = 'root';
 const password = '';
-const db = 'database';
+const db = 'koscioly';
 
 function getPlacemarksFromDB(){
 

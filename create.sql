@@ -1,5 +1,5 @@
-CREATE DATABASE database;
-USE database;
+CREATE DATABASE koscioly;
+USE koscioly;
 
 CREATE TABLE `churches` (
   `id` int(11) NOT NULL,
