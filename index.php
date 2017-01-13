@@ -16,8 +16,8 @@
                 <form action='dodaj.php' method='post'>
                     <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" required />
                     <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
-                    <input type="text" name="nazwaKosciola" id="nazwaKosciola" required />
-                    <input type="text" name="adresKosciola" id="adresKosciola" required />
+                    <input type="text" name="nazwaKosciola" id="nazwaKosciola" placeholder="Podaj nazwę parafii" required />
+                    <input type="text" name="adresKosciola" id="adresKosciola" placeholder="Podaj adres www parafii" required />
                     <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" />
                 </form>
             </div>
