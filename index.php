@@ -17,7 +17,7 @@
                     <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" required />
                     <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
                     <input type="text" name="nazwaKosciola" id="nazwaKosciola" required />
-                    <input type="text" name="adresKosciola" id="adresKosciola" />
+                    <input type="text" name="adresKosciola" id="adresKosciola" required />
                     <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" />
                 </form>
             </div>
