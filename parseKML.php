@@ -30,10 +30,10 @@ function pKML($file) {
                 $coordinate = str_replace(" ", "", $coordinate);
             
                 $tmp = explode(",", $coordinate);
-            
-                $latlng['longitude'] = $tmp[0];
-                $latlng['latitude'] = $tmp[1];
-                $latlng['altitude'] = $tmp[2];
+                
+                $latlng['longitude'] = doubleval($tmp[0]);
+                $latlng['latitude'] = doubleval($tmp[1]);
+                $latlng['altitude'] = doubleval($tmp[2]);
             }
 
         $output[$name->nodeValue]['coord'] = $latlng;
