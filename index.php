@@ -14,11 +14,11 @@
         <div id="formularz">
             <div class="kontenerDanych">
                 <form action='dodaj.php' method='post'>
-                    <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" />
-                    <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" />
-                    <input type="text" name="nazwaKosciola" id="nazwaKosciola">
-                    <input type="text" name="adresKosciola" id="adresKosciola">
-                    <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" >
+                    <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" required />
+                    <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
+                    <input type="text" name="nazwaKosciola" id="nazwaKosciola" required />
+                    <input type="text" name="adresKosciola" id="adresKosciola" />
+                    <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" />
                 </form>
             </div>
             <div class="kontenerDanych">
