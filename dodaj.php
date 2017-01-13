@@ -7,6 +7,9 @@ $dane = $_POST;
 addPlacemarkToDB($dane['nazwaKosciola'],
                 $dane['adresKosciola'],
                 $dane['dlugoscGeograficzna'],
-                $dane['szerokoscGeograficzna']);
+                $dane['szerokoscGeograficzna'],
+                0.0);
+
+header('Location: index.php');
 
 ?>
