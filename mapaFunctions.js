@@ -50,7 +50,7 @@ function codeLatLng(event) {
 
     dane = dane.stringify();
 
-    addToDatabase(dane);
+    // addToDatabase(dane);
 }
 
 function addToDatabase(jsondata) {
