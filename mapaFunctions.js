@@ -47,7 +47,7 @@ function retrieve(bounds) {
             }
         };
     xhr.setRequestHeader("Content-type","application/json");
-    xhr.send(JSON.stringity(granice));
+    xhr.send("granice="+JSON.stringity(granice));
 
 }
 
