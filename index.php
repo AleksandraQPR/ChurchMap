@@ -13,9 +13,13 @@
         <div id="mapa"></div>
         <div id="formularz">
             <div class="kontenerDanych">
-                <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" />
-                <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" />
-                <button type="button" onclick="codeLatLng()" >ZATWIERDŹ WSPÓŁRZĘDNE</button>
+                <form action='dodaj.php' method='post'>
+                    <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" />
+                    <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" />
+                    <input type="text" name="nazwaKosciola" id="nazwaKosciola">
+                    <input type="text" name="adresKosciola" id="adresKosciola">
+                    <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" >
+                </form>
             </div>
             <div class="kontenerDanych">
                 <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
