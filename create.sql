@@ -1,3 +1,6 @@
+CREATE DATABASE database;
+USE database;
+
 CREATE TABLE `churches` (
   `id` int(11) NOT NULL,
   `name` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
