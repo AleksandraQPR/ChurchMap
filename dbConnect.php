@@ -4,15 +4,18 @@ const user = 'root';
 const password = '';
 const db = 'koscioly';
 
-function getPlacemarksFromDB(){
+function getPlacemarksFromDB($u, $d, $l, $r){
 
     $connection = getConnection();
 
     if($connection == null){
         return;
     }
+    
+    $sql = "SELECT * FROM churches WHERE longitude > ? AND longitude < ? AND latitude > ? AND latitude < ? ";
+    $statement = $connection->prepare($sql);
+    $statement->bind_param("dddd", $d, $u, $l, $r);
 
-    $sql = "SELECT * FROM churches";
 
     $result = $connection->query($sql);
 

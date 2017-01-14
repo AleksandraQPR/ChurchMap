@@ -28,8 +28,8 @@ function grab(event) {
     document.getElementById("dlugoscGeograficzna").value = event.latLng.lng();
     lng=event.latLng.lng();
 
-    var miejsce = map.getBounds();
-    //TODO wywolanie funkcji retrieve
+    //var miejsce = map.getBounds();
+    //retrieve(mapa);
 ;}
 
 function retrieve(bounds) {
@@ -44,6 +44,15 @@ function retrieve(bounds) {
     xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 //TODO wyswietlanie wszystkich punktow na mapie
+                var latlng = new google.maps.LatLng(lat, lng);
+
+                geocoder.geocode({'latLng': latlng}, function(results, status) {             var marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map
+                });
+        infowindow.setContent(results[1].formatted_address);
+        infowindow.open(map, marker);
+    });
                 console.log(xhr.responseText);
             }
         };
