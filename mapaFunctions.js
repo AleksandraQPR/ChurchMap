@@ -18,8 +18,8 @@ function initialize() {
     google.maps.event.addListener(map, 'click', grab);
     
     // wyświetlany kml na powierzchni mapy
-    var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
-    kmllayer.setMap(map);
+    //var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
+    //kmllayer.setMap(map);
 }
 	 
 function grab(event) {
@@ -64,7 +64,6 @@ function retrieve(bounds) {
 function codeLatLng(event) {
 
     var latlng = new google.maps.LatLng(lat, lng);
-    var dane = {};
 
     geocoder.geocode({'latLng': latlng}, function(results, status) {
         var marker = new google.maps.Marker({
@@ -74,13 +73,6 @@ function codeLatLng(event) {
         infowindow.setContent(results[1].formatted_address);
         infowindow.open(map, marker);
     });
-
-    dane['dlugosc'] = lng;
-    dane['szerokosc'] = lat;
-    dane['nazwa'] = '';
-    dane['strona'] = '';
-
-    dane = dane.stringify();
 
     // addToDatabase(dane);
 }
