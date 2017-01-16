@@ -14,7 +14,7 @@ function getPlacemarksFromDB($u, $d, $l, $r){
     
     $sql = "SELECT * FROM churches WHERE longitude > ? AND longitude < ? AND latitude > ? AND latitude < ? ";
     $statement = $connection->prepare($sql);
-    $statement->bind_param("dddd", $d, $u, $l, $r);
+    $statement->bind_param("dddd", $l, $r, $d, $u);
 
 
     $result = $connection->query($sql);
