@@ -18,7 +18,7 @@
                     <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
                     <input type="text" name="nazwaKosciola" id="nazwaKosciola" placeholder="Podaj nazwę parafii" required />
                     <input type="text" name="adresKosciola" id="adresKosciola" placeholder="Podaj adres www parafii" required />
-                    <input type="submit" onclick="codeLatLng()" value="ZATWIERDŹ WSPÓŁRZĘDNE" />
+                    <button type="submit">ZATWIERDŹ WSPÓŁRZĘDNE</button>
                 </form>
             </div>
             <div class="kontenerDanych">
