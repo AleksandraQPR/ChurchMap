@@ -2,21 +2,23 @@
 
 require_once 'dbConnect.php';
 
-$granice = $_POST['granice'];
-$granice = json_decode($granice);
-//TODO: parametryzacja funkcji
-$u = $granice['gora'];
-$d = $granice['dol'];
-$l = $granice['lewo'];
-$r = $granice['prawo'];
+if(isset($_GET['granice'])) {
+    $granice = $_GET['granice'];
+    $granice = json_decode($granice, true);
 
-$dane = getPlacemarksFromDB($u, $d, $l, $r);
+    //TODO: parametryzacja funkcji
+    $u = $granice['gora'];
+    $d = $granice['dol'];
+    $l = $granice['lewo'];
+    $r = $granice['prawo'];
 
-if($dane) {
-    echo $dane;
+    $dane = getPlacemarksFromDB($u, $d, $l, $r);
+
+    if($dane) {
+        echo $dane;
+    }
+    else {
+        echo 'false';
+    }
 }
-else {
-    echo 'false';
-}
-
 ?>

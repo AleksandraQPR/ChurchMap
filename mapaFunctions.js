@@ -1,6 +1,7 @@
 var map;
 var lat;
 var lng;
+var miejsce;
 
 var geocoder = new google.maps.Geocoder();
 var infowindow = new google.maps.InfoWindow();
@@ -28,8 +29,8 @@ function grab(event) {
     document.getElementById("dlugoscGeograficzna").value = event.latLng.lng();
     lng=event.latLng.lng();
 
-    //var miejsce = map.getBounds();
-    //retrieve(mapa);
+    miejsce = map.getBounds();
+    retrieve(miejsce);
 ;}
 
 function retrieve(bounds) {
@@ -39,18 +40,17 @@ function retrieve(bounds) {
     granice.dol = bounds.getSouthWest().lat();
     granice.lewo = bounds.getSouthWest().lng();
     
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'pokaz.php', true);
-    xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
+    var zapytanie = new XMLHttpRequest();
+    zapytanie.open("GET", 'pokaz.php?granice='+JSON.stringify(granice), true);
+    zapytanie.onreadystatechange = function() {
+            if (zapytanie.readyState == 4 && zapytanie.status == 200) {
                 //TODO wyswietlanie wszystkich punktow na mapie
                 
-                console.log(xhr.responseText);
+                console.log(zapytanie.responseText);
             }
         };
-    xhr.setRequestHeader("Content-type","application/json");
-    xhr.send("granice="+JSON.stringity(granice));
 
+    zapytanie.send();
 }
 
 function codeLatLng(event) {
@@ -65,7 +65,6 @@ function codeLatLng(event) {
         infowindow.setContent(results[1].formatted_address);
         infowindow.open(map, marker);
     });
-
     // addToDatabase(dane);
 }
 
