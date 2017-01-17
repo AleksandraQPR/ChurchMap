@@ -45,8 +45,19 @@ function retrieve(bounds) {
     zapytanie.onreadystatechange = function() {
             if (zapytanie.readyState == 4 && zapytanie.status == 200) {
                 //TODO wyswietlanie wszystkich punktow na mapie
-                
-                console.log(zapytanie.responseText);
+                var odpowiedz = JSON.parse(zapytanie.responseText);
+                // console.log(zapytanie.responseText);
+                for (var kosc in odpowiedz) {
+                    var pozycja = new google.maps.LatLng(odpowiedz[kosc]['coord']['latitude'], odpowiedz[kosc]['coord']['longitude']);
+                    var marker = new google.maps.Marker({
+                        position: pozycja,
+                        map: map,
+                        title: kosc
+                        
+                    });
+                    marker.setMap(map);
+               }
+
             }
         };
 
@@ -65,7 +76,6 @@ function codeLatLng(event) {
         infowindow.setContent(results[1].formatted_address);
         infowindow.open(map, marker);
     });
-    // addToDatabase(dane);
 }
 
 function addToDatabase() {

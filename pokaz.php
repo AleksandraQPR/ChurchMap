@@ -15,7 +15,7 @@ if(isset($_GET['granice'])) {
     $dane = getPlacemarksFromDB($u, $d, $l, $r);
 
     if($dane) {
-        echo $dane;
+        echo json_encode($dane);
     }
     else {
         echo 'false';

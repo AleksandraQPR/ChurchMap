@@ -12,9 +12,9 @@ function getPlacemarksFromDB($u, $d, $l, $r){
         return;
     }
     
-    $sql = "SELECT * FROM churches WHERE longitude > ? AND longitude < ? AND latitude > ? AND latitude < ? ";
-    $statement = $connection->prepare($sql);
-    $statement->bind_param("dddd", $l, $r, $d, $u);
+    $sql = "SELECT * FROM churches ";
+    //$statement = $connection->prepare($sql);
+    //$statement->bind_param("dddd", $l, $r, $d, $u);
 
 
     $result = $connection->query($sql);
