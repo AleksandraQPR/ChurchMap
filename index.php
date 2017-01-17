@@ -13,7 +13,7 @@
         <div id="mapa"></div>
         <div id="formularz">
             <div class="kontenerDanych">
-                <form action='dodaj.php' method='post'>
+                <form onsubmit='addToDatabase()'>
                     <input type="text" name="dlugoscGeograficzna" id="dlugoscGeograficzna" placeholder="Podaj długość geograficzną" required />
                     <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
                     <input type="text" name="nazwaKosciola" id="nazwaKosciola" placeholder="Podaj nazwę parafii" required />

@@ -68,16 +68,26 @@ function codeLatLng(event) {
     // addToDatabase(dane);
 }
 
-function addToDatabase(jsondata) {
+function addToDatabase() {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'wpisz.php', false);
+
+    var nazwa = document.getElementById('nazwaKosciola').value;
+    var adres = document.getElementById('adresKosciola').value;
+    var dlugosc = lng;
+    var szerokosc = lat;
+    var wartosci = "nazwaKosciola=" + nazwa;
+    wartosci += "&adresKosciola=" + adres;
+    wartosci += "&dlugoscGeograficzna=" + dlugosc;
+    wartosci += "&szerokoscGeograficzna=" + szerokosc;
+
+    xhr.open("GET", 'dodaj.php?'+wartosci, true);
     xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 
                 console.log(xhr.responseText);
             }
         };
-    xhr.send(jsondata);
+    xhr.send();
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
