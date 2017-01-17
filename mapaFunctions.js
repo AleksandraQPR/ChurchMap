@@ -59,7 +59,7 @@ function retrieve() {
                         })
                     });
                     google.maps.event.addListener(marker, 'click', function() {
-                        console.log(this.info.open(map, this));
+                        this.info.open(map, this);
                     });
                     marker.setMap(map);
                }
