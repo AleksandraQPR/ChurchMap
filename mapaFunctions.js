@@ -53,8 +53,11 @@ function retrieve() {
                     var marker = new google.maps.Marker({
                         position: pozycja,
                         map: map,
-                        title: kosc
-                        
+                        title: kosc,
+                        info: new google.maps.InfoWindow({content:kosc})
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        console.log(this.info.open(map, this));
                     });
                     marker.setMap(map);
                }
