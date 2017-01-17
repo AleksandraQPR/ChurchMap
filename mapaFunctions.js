@@ -54,7 +54,9 @@ function retrieve() {
                         position: pozycja,
                         map: map,
                         title: kosc,
-                        info: new google.maps.InfoWindow({content:kosc})
+                        info: new google.maps.InfoWindow({
+                            content: 'Nazwa: ' + kosc + '<br/>Adres: '+ odpowiedz[kosc]['desc']
+                        })
                     });
                     google.maps.event.addListener(marker, 'click', function() {
                         console.log(this.info.open(map, this));
