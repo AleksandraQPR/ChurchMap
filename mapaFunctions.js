@@ -17,6 +17,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('mapa'), myOptions);
 
     google.maps.event.addListener(map, 'click', grab);
+    google.maps.event.addListener(map, 'drag', retrieve);
     
     // wyświetlany kml na powierzchni mapy
     //var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
@@ -29,11 +30,11 @@ function grab(event) {
     document.getElementById("dlugoscGeograficzna").value = event.latLng.lng();
     lng=event.latLng.lng();
 
-    miejsce = map.getBounds();
-    retrieve(miejsce);
 ;}
 
-function retrieve(bounds) {
+function retrieve() {
+    miejsce = map.getBounds();
+    bounds = miejsce;
     var granice = {};
     granice.gora = bounds.getNorthEast().lat();
     granice.prawo = bounds.getNorthEast().lng();
