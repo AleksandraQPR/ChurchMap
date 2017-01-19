@@ -88,6 +88,27 @@ function addPlacemarksToDB($placemarks){
     $connection->close();
 }
 
+function removePlacemarkFromDB($id){
+
+    $connection = getConnection();
+
+    if($connection == null){
+        return;
+    }
+
+    $sql = "DELETE FROM churches WHERE id = ?";
+
+    $statement = $connection->prepare($sql);
+
+    $statement->bind_param("i", $id);
+
+    $statement->execute();
+
+    $statement->close();
+
+    $connection->close();
+}
+
 
 function insertToDB($connection, $name, $description, $longitude, $latitude, $altitude){
 
