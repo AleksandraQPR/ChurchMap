@@ -9,3 +9,7 @@ CREATE TABLE `churches` (
   `latitude` float NOT NULL,
   `altitude` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `churches`
+  ADD PRIMARY KEY (`id`);
