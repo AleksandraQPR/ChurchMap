@@ -56,7 +56,10 @@ function retrieve() {
                         map: map,
                         title: kosc,
                         info: new google.maps.InfoWindow({
-                            content: 'Nazwa: ' + kosc + '<br/>Adres: '+ odpowiedz[kosc]['desc']
+                            content: 'Nazwa: ' + kosc +
+                            '<br/>Adres: '+ odpowiedz[kosc]['desc'] +
+                            '<br/><button onclick="removeFromDAtabase('+
+                            odpowiedz[kosc]["id"]+')" >USUŃ</button>'
                         })
                     });
                     google.maps.event.addListener(marker, 'click', function() {
