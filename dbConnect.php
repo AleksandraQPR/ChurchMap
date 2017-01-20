@@ -4,6 +4,49 @@ const user = 'root';
 const password = '';
 const db = 'koscioly';
 
+function getAllPlacemarksFromDB(){
+    $connection = getConnection();
+
+    if($connection == null){
+        return;
+    }
+
+    $sql = "SELECT * FROM churches ";
+
+    $result = $connection->query($sql);
+
+    if ($result->num_rows > 0) {
+
+        $placemarks = array();
+
+        while($row = $result->fetch_assoc()) {
+            /*
+                        echo "id: " . $row["id"].
+                            " - name: " . $row["name"].
+                            "    - description: " . $row["description"].
+                            "    - longitude: " . $row["longitude"].
+                            "    - latitude: " . $row["latitude"].
+                            "    - altitude: " . $row["altitude"].
+                            "<br>";
+            */
+            $name = $row["name"];
+
+            $placemarks[$name] = array();
+
+            $placemarks[$name]['desc'] = $row["description"];
+
+
+            $placemarks[$name]['coord']['longitude'] = $row["longitude"];
+            $placemarks[$name]['coord']['latitude'] = $row["latitude"];
+            $placemarks[$name]['coord']['altitude'] = $row["altitude"];
+        }
+        return $placemarks;
+
+    } else {
+        return null;
+    }
+}
+
 function getPlacemarksFromDB($u, $d, $l, $r){
 
     $connection = getConnection();
@@ -11,11 +54,14 @@ function getPlacemarksFromDB($u, $d, $l, $r){
     if($connection == null){
         return;
     }
-    
-    $sql = "SELECT * FROM churches ";
+
+
+    //$sql = "SELECT * FROM churches ";
+   // $sql = "SELECT * FROM churches WHERE longitude > ? AND longitude < ? AND latitude > ? AND latitude < ? ";
+    $sql = "SELECT * FROM churches WHERE longitude > $l AND longitude < $r AND latitude > $d AND latitude < $u ";
+
     //$statement = $connection->prepare($sql);
     //$statement->bind_param("dddd", $l, $r, $d, $u);
-
 
     $result = $connection->query($sql);
 
@@ -108,7 +154,6 @@ function removePlacemarkFromDB($id){
 
     $connection->close();
 }
-
 
 function insertToDB($connection, $name, $description, $longitude, $latitude, $altitude){
 
