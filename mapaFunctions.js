@@ -1,6 +1,7 @@
 var map;
 var lat;
 var lng;
+var markersArray = [];
 
 var geocoder = new google.maps.Geocoder();
 var infowindow = new google.maps.InfoWindow();
@@ -42,6 +43,12 @@ function retrieve() {
     granice.dol = bounds.getSouthWest().lat();
     granice.lewo = bounds.getSouthWest().lng();
     
+    while(markersArray.length) {
+        var a =markersArray.pop(); 
+        google.maps.event.clearInstanceListeners(a);
+        a.setMap(null);
+    }
+
     var zapytanie = new XMLHttpRequest();
     zapytanie.open("GET", 'pokaz.php?granice='+JSON.stringify(granice), true);
     zapytanie.onreadystatechange = function() {
@@ -62,6 +69,7 @@ function retrieve() {
                             odpowiedz[kosc]["id"]+')" >USUŃ</button>'
                         })
                     });
+                    markersArray.push(marker);
                     google.maps.event.addListener(marker, 'click', function() {
                         this.info.open(map, this);
                     });
