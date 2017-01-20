@@ -39,6 +39,7 @@ function getAllPlacemarksFromDB(){
             $placemarks[$name]['coord']['longitude'] = $row["longitude"];
             $placemarks[$name]['coord']['latitude'] = $row["latitude"];
             $placemarks[$name]['coord']['altitude'] = $row["altitude"];
+            $placemarks[$name]['id'] = $row["id"];
         }
         return $placemarks;
 
@@ -77,6 +78,7 @@ function getPlacemarksFromDB($u, $d, $l, $r){
                 "    - longitude: " . $row["longitude"].
                 "    - latitude: " . $row["latitude"].
                 "    - altitude: " . $row["altitude"].
+                "    - id: " . $row["id"].
                 "<br>";
 */
             $name = $row["name"];
@@ -89,6 +91,8 @@ function getPlacemarksFromDB($u, $d, $l, $r){
             $placemarks[$name]['coord']['longitude'] = $row["longitude"];
             $placemarks[$name]['coord']['latitude'] = $row["latitude"];
             $placemarks[$name]['coord']['altitude'] = $row["altitude"];
+
+            $placemarks[$name]['id'] = $row["id"];
         }
         return $placemarks;
 
@@ -157,7 +161,7 @@ function removePlacemarkFromDB($id){
 
 function insertToDB($connection, $name, $description, $longitude, $latitude, $altitude){
 
-    $sql = "INSERT INTO churches (`name`, description, longitude, latitude, altitude) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO churches (name, description, longitude, latitude, altitude) VALUES (?, ?, ?, ?, ?)";
 
     $statement = $connection->prepare($sql);
 
