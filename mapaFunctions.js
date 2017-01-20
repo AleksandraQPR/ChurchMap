@@ -60,6 +60,7 @@ function retrieve() {
                     var pozycja = new google.maps.LatLng(odpowiedz[kosc]['coord']['latitude'], odpowiedz[kosc]['coord']['longitude']);
                     var marker = new google.maps.Marker({
                         position: pozycja,
+                        showing: false,
                         map: map,
                         title: kosc,
                         info: new google.maps.InfoWindow({
@@ -71,7 +72,14 @@ function retrieve() {
                     });
                     markersArray.push(marker);
                     google.maps.event.addListener(marker, 'click', function() {
-                        this.info.open(map, this);
+                        if(!this.showing){
+                            this.info.open(map, this);
+                            this.showing = true;
+                        }
+                        else{
+                            this.info.close();
+                            this.showing = false;
+                        }
                     });
                     marker.setMap(map);
                }
