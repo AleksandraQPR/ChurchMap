@@ -1,7 +1,6 @@
 var map;
 var lat;
 var lng;
-var miejsce;
 
 var geocoder = new google.maps.Geocoder();
 var infowindow = new google.maps.InfoWindow();
@@ -33,9 +32,9 @@ function grab(event) {
 ;}
 
 function retrieve() {
-    miejsce = map.getBounds();
-    bounds = miejsce;
+    var bounds = map.getBounds();
     var granice = {};
+
     granice.gora = bounds.getNorthEast().lat();
     granice.prawo = bounds.getNorthEast().lng();
     granice.dol = bounds.getSouthWest().lat();
@@ -53,8 +52,13 @@ function retrieve() {
                     var marker = new google.maps.Marker({
                         position: pozycja,
                         map: map,
-                        title: kosc
-                        
+                        title: kosc,
+                        info: new google.maps.InfoWindow({
+                            content: 'Nazwa: ' + kosc + '<br/>Adres: '+ odpowiedz[kosc]['desc']
+                        })
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        this.info.open(map, this);
                     });
                     marker.setMap(map);
                }
