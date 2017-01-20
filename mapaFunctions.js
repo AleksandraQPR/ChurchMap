@@ -5,6 +5,8 @@ var lng;
 var geocoder = new google.maps.Geocoder();
 var infowindow = new google.maps.InfoWindow();
 
+google.maps.event.addDomListener(window, 'load', initialize);
+
 function initialize() {
 
     var myOptions = {
@@ -104,8 +106,6 @@ function addToDatabase() {
         };
     xhr.send();
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function upload() {
