@@ -81,27 +81,13 @@ function retrieve() {
                             this.showing = false;
                         }
                     });
-                    marker.setMap(map);
+                    //marker.setMap(map);
                }
 
             }
         };
 
     zapytanie.send();
-}
-
-function codeLatLng(event) {
-
-    var latlng = new google.maps.LatLng(lat, lng);
-
-    geocoder.geocode({'latLng': latlng}, function(results, status) {
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map
-        });
-        infowindow.setContent(results[1].formatted_address);
-        infowindow.open(map, marker);
-    });
 }
 
 function addToDatabase() {
