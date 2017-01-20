@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
 
     removePlacemarkFromDB($id);
-    echo "Usunięto";
+    echo "Usunieto";
 }
 
 ?>
