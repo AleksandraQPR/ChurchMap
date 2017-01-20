@@ -13,3 +13,6 @@ CREATE TABLE `churches` (
 
 ALTER TABLE `churches`
   ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `churches`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
