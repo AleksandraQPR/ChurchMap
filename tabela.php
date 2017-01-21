@@ -27,7 +27,7 @@
             $i = $v['id'];
 
         $row = <<<HTML
-            <tr>
+            <tr id="$i">
                 <th>$k</th>
                 <th>$a</th>
                 <th><button onclick="removeFromDAtabase('$i')" >USUŃ</button></th>
