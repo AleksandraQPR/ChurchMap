@@ -23,13 +23,14 @@
         $kosc = getAllPlacemarksFromDB();
 
         foreach ($kosc as $k => $v) {
-            $a= $v['desc'];
+            $a = $v['desc'];
+            $i = $v['id'];
 
         $row = <<<HTML
             <tr>
                 <th>$k</th>
                 <th>$a</th>
-                <th><!-- miejsce na guzik usuwania --></th>
+                <th><button onclick="removeFromDAtabase('$i')" >USUŃ</button></th>
             </tr>
 HTML;
 
