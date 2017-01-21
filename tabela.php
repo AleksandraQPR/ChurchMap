@@ -11,6 +11,11 @@
     </head>
     <body>
         <table class="kontenerDAnych">
+            <tr>
+                <th>Nazwa</th>
+                <th>Adres</th>
+                <th>Akcja</th>
+            </tr>
         <?php
 
         require_once 'dbConnect.php';
