@@ -38,6 +38,7 @@ HTML;
         }
 
         ?>
-    </table>
+        </table>
+        <a href="index.php">POWRÓT</a>
     </body>
 </html>
