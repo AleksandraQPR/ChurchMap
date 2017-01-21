@@ -41,7 +41,7 @@ input[type=text]:focus
 {
     box-shadow: 0 0 8px 1px #2cbfa4;
 }
-button
+button,a
 {
     width: 200px;
     padding: 10px;
@@ -52,7 +52,7 @@ button
     border-radius: 25px;
     color: #f5f7fa;
 }
-button:hover
+button:hover,a:hover
 {
     background-color: #1a9d92;
     cursor: pointer;
