@@ -25,6 +25,9 @@
                 <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
                 <button type="button" onclick="upload()" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
             </div>
+            <div class="kontenerDanych">
+                <a href="tabela.php">TABELA KOŚCIOŁÓW</a>
+            </div>
         </div>
     </body>
 </html>
