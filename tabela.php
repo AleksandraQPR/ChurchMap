@@ -30,7 +30,7 @@
             <tr id="$i">
                 <th>$k</th>
                 <th>$a</th>
-                <th><button onclick="removeFromDAtabase('$i')" >USUŃ</button></th>
+                <th><button onclick="removeFromDBAndClear('$i')" >USUŃ</button></th>
             </tr>
 HTML;
 

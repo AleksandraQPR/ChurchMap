@@ -128,6 +128,12 @@ function removeFromDAtabase(id) {
     xhr.send();
 }
 
+function removeFromDBAndClear(id) {
+    removeFromDAtabase(id);
+    var row = document.getElementById(id)
+    row.remove();
+}
+
 function upload() {
     if (document.getElementById('plikKML') != null) {
         var file = document.querySelector('#plikKML').files[0];
