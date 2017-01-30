@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
         <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script src="mapaFunctions.js"></script>
+        <script src="tabelaFunctions.js"></script>
     </head>
     <body>
         <table class="kontenerDAnych">
