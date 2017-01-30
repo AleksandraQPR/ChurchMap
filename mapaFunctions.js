@@ -20,7 +20,7 @@ function initialize() {
 
     google.maps.event.addListener(map, 'click', grab);
     google.maps.event.addListener(map, 'drag', retrieve);
-    
+    google.maps.event.addListener(map, 'zoom_changed', retrieve);
     // wyświetlany kml na powierzchni mapy
     //var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
     //kmllayer.setMap(map);
