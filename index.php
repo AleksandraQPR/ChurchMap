@@ -18,12 +18,12 @@
                     <input type="text" name="szerokoscGeograficzna" id="szerokoscGeograficzna" placeholder="Podaj szerokość geograficzną" required />
                     <input type="text" name="nazwaKosciola" id="nazwaKosciola" placeholder="Podaj nazwę parafii" required />
                     <input type="text" name="adresKosciola" id="adresKosciola" placeholder="Podaj adres www parafii" required />
-                    <button type="submit">ZATWIERDŹ WSPÓŁRZĘDNE</button>
+                    <button type="submit">ZATWIERDŹ DANE</button>
                 </form>
             </div>
             <div class="kontenerDanych">
                 <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
-                <button type="button" onclick="upload()" >ZATWIERDŹ ŚCIEŻKĘ PLIKU</button>
+                <button type="button" onclick="upload()">ZATWIERDŹ PLIK</button>
             </div>
             <div class="kontenerDanych">
                 <a href="tabela.php">TABELA KOŚCIOŁÓW</a>
