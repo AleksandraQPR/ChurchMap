@@ -26,8 +26,6 @@
                 <button type="button" onclick="upload()">ZATWIERDŹ PLIK</button>
                 </br>
                 <button type="button" onclick="location.href='tabela.php';">TABELA KOŚCIOŁÓW</button>
-
-
             </div>
         </div>
     </body>
