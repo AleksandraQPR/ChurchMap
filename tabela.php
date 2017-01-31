@@ -9,7 +9,7 @@
         src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="tabelaFunctions.js"></script>
     </head>
-    <body id="tabela">
+    <body id="tłoTabela">
         <table class="kontenerDAnych">
             <tr>
                 <th>Nazwa</th>
