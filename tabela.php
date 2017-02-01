@@ -10,7 +10,7 @@
         <script src="tabelaFunctions.js"></script>
     </head>
     <body id="tłoTabela">
-        <table class="kontenerDAnych">
+        <table>
             <tr>
                 <th>Nazwa</th>
                 <th>Adres</th>
@@ -39,6 +39,6 @@ HTML;
 
         ?>
         </table>
-        <a href="index.php">POWRÓT</a>
+        <a href="index.php">POWRÓT</a>      
     </body>
 </html>
