@@ -9,7 +9,7 @@
         src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="tabelaFunctions.js"></script>
     </head>
-    <body id="tłoTabela">
+    <body id="tloTabela">
         <table>
             <tr>
                 <th class="header">NAZWA</th>
@@ -31,9 +31,7 @@
             <tr id="$i">
                 <td>$k</td>
                 <td>$a</td>
-                <td><button class="usun" onclick="removeFromDBAndClear('$i')" >USUŃ</button></td>
-
-
+                <td><button class="usun" onclick="removeFromDBAndClear('$i')">USUŃ</button></td>
             </tr>
 HTML;
 
