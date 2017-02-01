@@ -14,7 +14,7 @@
             <tr>
                 <th class="header">NAZWA</th>
                 <th class="header">ADRES</th>
-                <th class="header">>AKCJA</th>
+                <th class="header">AKCJA</th>
             </tr>
         <?php
 
