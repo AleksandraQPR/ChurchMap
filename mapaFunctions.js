@@ -21,6 +21,9 @@ function initialize() {
     google.maps.event.addListener(map, 'click', grab);
     google.maps.event.addListener(map, 'drag', retrieve);
     google.maps.event.addListener(map, 'zoom_changed', retrieve);
+
+    var nazwa = document.getElementById('plikKML')
+    nazwa.addEventListener("change", zmiana); 
     // wyświetlany kml na powierzchni mapy
     //var kmllayer = new google.maps.KmlLayer('http://13.79.156.6/sample.kml');
     //kmllayer.setMap(map);
@@ -128,6 +131,14 @@ function removeFromDatabase(id) {
     xhr.send();
 }
 
+function zmiana() {
+    if (document.getElementById('plikKML') != null) {
+        var filename = document.querySelector('#plikKML').files[0].name;
+        var name = document.getElementById('etykieta').firstChild;
+        name.data = filename;
+    }
+}
+
 function upload() {
     if (document.getElementById('plikKML') != null) {
         var file = document.querySelector('#plikKML').files[0];
@@ -150,6 +161,7 @@ function upload() {
                 newInput.placeholder = oldInput.placeholder; 
 
                 oldInput.parentNode.replaceChild(newInput, oldInput);
+                document.getElementById('etykieta').firstChild.data='Plik KML';
             }
         };
         fd.append("upload_file", file);

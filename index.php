@@ -23,7 +23,7 @@
             </div>
             <div class="kontenerDanych">
                 <div>
-                <label class="fileContainer">
+                <label class="fileContainer" id="etykieta">
                     Plik KML
                     <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
                 </label>
