@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>
         <meta charset="utf-8" />
-		<title>Mapa kościołów</title>
+		<title>Zestawienie kościołów</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
         <script type="text/javascript"
