@@ -27,6 +27,10 @@ html,body
 .kontenerDanych
 {
     margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    border-bottom: 1px solid #2cbfa4;
 }
 input[type=text]
 {
@@ -115,8 +119,29 @@ th, td {
     padding-left: 30px;
     padding-right: 30px;
     color: #2f4052;
-    font-size: 14px;
-
+    font-size: 14px;   
+}
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+.fileContainer:hover
+{
+    color: #1a9d92;
+    cursor: pointer;
+}
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    filter: alpha(opacity=0);
+    height: 20px;
+    width: 300px;
     
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
 }
 
