@@ -22,11 +22,18 @@
                 </form>
             </div>
             <div class="kontenerDanych">
-                <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
+                <div>
+                <label class="fileContainer">
+                    Plik KML
+                    <input type="file" name="plikKML" id="plikKML" placeholder="Podaj ścieżkę pliku KML" />
+                </label>
+                </div>
                 <button type="button" onclick="upload()">ZATWIERDŹ PLIK</button>
+                </div>
+
                 </br>
                 <button type="button" onclick="location.href='tabela.php';">TABELA KOŚCIOŁÓW</button>
-            </div>
+            
         </div>
     </body>
 </html>
