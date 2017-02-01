@@ -3,6 +3,7 @@ html,body
     font-family: 'Libre Franklin', sans-serif; 
     margin: 0 !important;
     height: 100%;
+    text-align: center;
 }
 #mapa
 {
@@ -47,6 +48,8 @@ button
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     background-color: #2cbfa4;
     border-radius: 25px;
@@ -58,11 +61,62 @@ button:hover,a:hover
     background-color: #1a9d92;
     cursor: pointer;
 }
+button.usun
+{
+
+    background-color: #e3e3e3;
+    border: 1px solid grey;
+    width: 150px;
+    color: #2f4052;
+    border-radius: 5px;
+   
+}
+button.usun:hover
+{
+    background-color: #c55151;
+    color: white;
+}
 #tłoTabela
 {   
     /* Background pattern from subtlepatterns.com */
-    background-image: url("img/brickwall_@2X.png");
+    /*background-image: url("img/brickwall_@2X.png");*/
+    background-color: #222930;
     width: 100%;
     height: 100%;
+}
+table
+{
+    background-color: #161b20;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-collapse: collapse; 
+    width: 850px;   
+}
+tr #header
+{
+    background-color: #2f4052;
+    height: 42px;
+    color: #2cbfa4;
+    font-size: 16px;
+}
+tr:nth-child(even)
+{
+    background-color: #e3e3e3;
+}
+tr:nth-child(odd)
+{
+    background-color: #f6f6f6;
+}
+
+th, td {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #2f4052;
+    font-size: 14px;
+
+    
 }
 
