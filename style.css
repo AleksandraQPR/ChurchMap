@@ -94,7 +94,7 @@ table
     border-collapse: collapse; 
     width: 850px;   
 }
-tr #header
+tr .header
 {
     background-color: #2f4052;
     height: 42px;
