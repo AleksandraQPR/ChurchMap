@@ -12,9 +12,9 @@
     <body id="tłoTabela">
         <table>
             <tr>
-                <th>Nazwa</th>
-                <th>Adres</th>
-                <th>Akcja</th>
+                <th class="header">Nazwa</th>
+                <th class="header">Adres</th>
+                <th class="header">Akcja</th>
             </tr>
         <?php
 
