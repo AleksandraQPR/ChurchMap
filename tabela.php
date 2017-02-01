@@ -39,6 +39,6 @@ HTML;
 
         ?>
         </table>
-        <a href="index.php">POWRÓT</a>      
+        <button type="button" onclick="location.href='index.php';">POWRÓT</button>     
     </body>
 </html>
