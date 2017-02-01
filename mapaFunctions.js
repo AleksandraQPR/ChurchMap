@@ -140,6 +140,16 @@ function upload() {
                 
                 console.log(xhr.responseText); // handle response.
                 retrieve();
+
+                var oldInput = document.getElementById('plikKML'); 
+                var newInput = document.createElement("input"); 
+
+                newInput.type = "file"; 
+                newInput.id = oldInput.id; 
+                newInput.name = oldInput.name; 
+                newInput.placeholder = oldInput.placeholder; 
+
+                oldInput.parentNode.replaceChild(newInput, oldInput);
             }
         };
         fd.append("upload_file", file);
