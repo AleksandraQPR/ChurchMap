@@ -27,10 +27,13 @@
             $i = $v['id'];
 
         $row = <<<HTML
+        
             <tr id="$i">
                 <td>$k</td>
                 <td>$a</td>
                 <td><button class="usun" onclick="removeFromDBAndClear('$i')" >USUŃ</button></td>
+
+
             </tr>
 HTML;
 
