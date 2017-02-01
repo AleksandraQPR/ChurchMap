@@ -28,9 +28,9 @@
 
         $row = <<<HTML
             <tr id="$i">
-                <th>$k</th>
-                <th>$a</th>
-                <th><button onclick="removeFromDBAndClear('$i')" >USUŃ</button></th>
+                <td>$k</td>
+                <td>$a</td>
+                <td><button onclick="removeFromDBAndClear('$i')" >USUŃ</button></td>
             </tr>
 HTML;
 
