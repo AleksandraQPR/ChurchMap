@@ -69,8 +69,8 @@ function retrieve() {
                         info: new google.maps.InfoWindow({
                             content: 'Nazwa: ' + kosc +
                             '<br/>Adres: '+ odpowiedz[kosc]['desc'] +
-                            '<br/><button onclick="removeFromDatabase('+
-                            odpowiedz[kosc]["id"]+')" >USUŃ</button>'
+                            '<br/><button class="usun" onclick="removeFromDatabase('+
+                            odpowiedz[kosc]["id"]+')">USUŃ</button>'
                         })
                     });
                     markersArray.push(marker);
